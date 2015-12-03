@@ -208,12 +208,13 @@
 
 	        var i;
 	        for (i = 0; i < albumLength; i++) { 
-		//$("photoList").append( "<img src='"+Cookies.get('email')+'/'+input[i]+"'/>" );
-		//console.log("<img src='"+Cookies.get('email')+'/'+input[i]+"'/>");
 	          $( ".photoList" ).append( "<hr>" );
+            $(".photoList" ).append("<form>");
 		        $( ".photoList" ).append( "<img src='"+Cookies.get('email')+'/'+input[i]+"'  position='relative' height='200' width='200' />" );
+            $(".photoList" ).append(" Photo Tag: <input type='text' name='phototag'> <button type='button'>Make Public</button></form>");
+         //   <input type='text' name="phototag'>
 	        }
-        $( ".photoList" ).append( "<br>" );   
+            $( ".photoList" ).append( "<br>" );   
 	      }
 	    }
 	  </script>
@@ -342,7 +343,7 @@
   <body>
     <h1 id='header'>Welcome</h1>
     <div class='picture_holder'>
-      <div id="blog">My Album:</div>
+      <div id="blog">My Personal Album:</div>
       <div class="photoUpPart">
         <form  id="photoUpload">
           <input type="file" id="inputFile"  class="form-control" name="image" accept="image/*"/> 
